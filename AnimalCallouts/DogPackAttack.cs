@@ -8,7 +8,7 @@ using CitizenFX.Core.Native;
 namespace AnimalCallouts
 {
     
-    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0", Probability.Medium)]
+    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.0", Probability.Medium)]
 
     public class DogPackAttack : Callout
     {

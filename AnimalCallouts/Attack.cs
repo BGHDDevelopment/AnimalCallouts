@@ -8,7 +8,7 @@ using CitizenFX.Core.Native;
 namespace AnimalCallouts
 {
     
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0", Probability.Medium)]
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.0", Probability.Medium)]
 
     public class Attack : Callout
     {
