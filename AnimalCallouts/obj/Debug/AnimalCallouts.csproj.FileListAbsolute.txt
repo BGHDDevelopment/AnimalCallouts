@@ -1,0 +1,9 @@
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\bin\Debug\AnimalCallouts.net.dll
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\bin\Debug\AnimalCallouts.net.pdb
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\bin\Debug\CalloutAPI.net.dll
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\bin\Debug\CitizenFX.Core.dll
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Debug\AnimalCallouts.csprojAssemblyReference.cache
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Debug\AnimalCallouts.csproj.CoreCompileInputs.cache
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Debug\AnimalCallouts.csproj.CopyComplete
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Debug\AnimalCallouts.net.dll
+C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Debug\AnimalCallouts.net.pdb
