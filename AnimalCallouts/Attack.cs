@@ -8,7 +8,7 @@ using CitizenFX.Core.Native;
 namespace AnimalCallouts
 {
     
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.1", Probability.Medium)]
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.2", Probability.Medium)]
 
     public class Attack : Callout
     {
@@ -61,12 +61,12 @@ namespace AnimalCallouts
         
         public override void OnCancelBefore()
         { 
-            foreach (Blip blip in animal.AttachedBlips)
+            /*foreach (Blip blip in animal.AttachedBlips)
                 if (blip.Exists())
                     blip.Delete();
             foreach (Blip blip in victim.AttachedBlips)
                 if (blip.Exists())
-                    blip.Delete();
+                    blip.Delete();*/
         }
         private void Notify(string message)
         {

@@ -8,7 +8,7 @@ using CitizenFX.Core.Native;
 namespace AnimalCallouts
 {
     
-    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.1", Probability.Medium)]
+    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.2", Probability.Medium)]
 
     public class DogPackAttack : Callout
     {
@@ -77,7 +77,7 @@ namespace AnimalCallouts
         
         public override void OnCancelBefore()
         { 
-            foreach (Blip blip in animal.AttachedBlips)
+            /*foreach (Blip blip in animal.AttachedBlips)
                 if (blip.Exists())
                     blip.Delete();
             foreach (Blip blip in animal2.AttachedBlips)
@@ -88,7 +88,7 @@ namespace AnimalCallouts
                     blip.Delete();
             foreach (Blip blip in victim.AttachedBlips)
                 if (blip.Exists())
-                    blip.Delete();
+                    blip.Delete();*/
         }
         private void Notify(string message)
         {
