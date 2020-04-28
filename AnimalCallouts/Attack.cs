@@ -4,11 +4,11 @@ using System.Threading.Tasks;
 using CitizenFX.Core;
 using CalloutAPI;
 using CitizenFX.Core.Native;
+using System.Runtime.InteropServices;
 
 namespace AnimalCallouts
 {
-    
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.2", Probability.Medium)]
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.3", Probability.Medium)]
 
     public class Attack : Callout
     {
@@ -58,15 +58,8 @@ namespace AnimalCallouts
             Notify("~r~[AnimalCallouts] ~y~Victim is being chased by a mountain lion!");
 
         }
-        
         public override void OnCancelBefore()
-        { 
-            /*foreach (Blip blip in animal.AttachedBlips)
-                if (blip.Exists())
-                    blip.Delete();
-            foreach (Blip blip in victim.AttachedBlips)
-                if (blip.Exists())
-                    blip.Delete();*/
+        {
         }
         private void Notify(string message)
         {

@@ -3,12 +3,12 @@ using System.Threading.Tasks;
 using CitizenFX.Core;
 using CalloutAPI;
 using CitizenFX.Core.Native;
+using System.Runtime.InteropServices;
 
 
 namespace AnimalCallouts
 {
-    
-    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.2", Probability.Medium)]
+    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.3", Probability.Medium)]
 
     public class DogPackAttack : Callout
     {
@@ -74,21 +74,8 @@ namespace AnimalCallouts
             Notify("~r~[AnimalCallouts] ~y~Victim is being attacked by a pack of dogs!");
 
         }
-        
         public override void OnCancelBefore()
-        { 
-            /*foreach (Blip blip in animal.AttachedBlips)
-                if (blip.Exists())
-                    blip.Delete();
-            foreach (Blip blip in animal2.AttachedBlips)
-                if (blip.Exists())
-                    blip.Delete();            
-            foreach (Blip blip in animal3.AttachedBlips)
-                if (blip.Exists())
-                    blip.Delete();
-            foreach (Blip blip in victim.AttachedBlips)
-                if (blip.Exists())
-                    blip.Delete();*/
+        {
         }
         private void Notify(string message)
         {
