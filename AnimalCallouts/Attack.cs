@@ -8,7 +8,7 @@ using System.Runtime.InteropServices;
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.3", Probability.Medium)]
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.4", Probability.Medium)]
 
     public class Attack : Callout
     {
