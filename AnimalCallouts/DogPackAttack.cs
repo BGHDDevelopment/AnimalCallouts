@@ -1,14 +1,13 @@
 ﻿using System;
 using System.Threading.Tasks;
 using CitizenFX.Core;
-using CalloutAPI;
 using CitizenFX.Core.Native;
-using System.Runtime.InteropServices;
+using FivePD.API;
 
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.4", Probability.Medium)]
+    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.5", Probability.Medium)]
 
     public class DogPackAttack : Callout
     {
