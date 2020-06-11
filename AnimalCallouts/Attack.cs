@@ -7,7 +7,7 @@ using FivePD.API;
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.5", Probability.Medium)]
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.5")]
 
     public class Attack : Callout
     {
