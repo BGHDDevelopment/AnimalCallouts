@@ -23,12 +23,12 @@ namespace AnimalCallouts
             float offsetX = rnd.Next(100, 700);
             float offsetY = rnd.Next(100, 700);
 
-            InitBase(World.GetNextPositionOnStreet(Game.PlayerPed.GetOffsetPosition(new Vector3(offsetX, offsetY, 0))));
+            InitInfo(World.GetNextPositionOnStreet(Game.PlayerPed.GetOffsetPosition(new Vector3(offsetX, offsetY, 0))));
             ShortName = "Mountain Lion Attack";
             CalloutDescription = "Someone is being attacked by a mountain lion!";
             ResponseCode = 3;
             StartDistance = 150f;
-
+            UpdateData();
         } 
         
         public override void OnStart(Ped player)
@@ -41,9 +41,9 @@ namespace AnimalCallouts
             animal.Task.FightAgainst(victim);
         }
         
-        public async override Task Init()
+        public async override Task OnAccept()
         {
-            OnAccept();
+            InitBlip();
             Random random = new Random();
             string animaltype = animalList[random.Next(animalList.Length)];
             PedHash Hash = (PedHash) API.GetHashKey(animaltype);
