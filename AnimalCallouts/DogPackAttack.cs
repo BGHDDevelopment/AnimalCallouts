@@ -28,7 +28,6 @@ namespace AnimalCallouts
             CalloutDescription = "Someone is being attacked by a pack of dogs!";
             ResponseCode = 3;
             StartDistance = 150f;
-            UpdateData();
         }
 
         private Blip animalBlip1, animalBlip2, animalBlip3, animalBlip4, victimBlip1;
@@ -52,6 +51,7 @@ namespace AnimalCallouts
         public async override Task OnAccept()
         {
             InitBlip();
+            UpdateData();
             Random random = new Random();
             string animaltype = animalList[random.Next(animalList.Length)];
             PedHash Hash = (PedHash) API.GetHashKey(animaltype);

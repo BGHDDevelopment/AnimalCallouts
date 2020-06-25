@@ -28,7 +28,6 @@ namespace AnimalCallouts
             CalloutDescription = "Someone is being attacked by a mountain lion!";
             ResponseCode = 3;
             StartDistance = 150f;
-            UpdateData();
         } 
         
         public override void OnStart(Ped player)
@@ -44,6 +43,7 @@ namespace AnimalCallouts
         public async override Task OnAccept()
         {
             InitBlip();
+            UpdateData();
             Random random = new Random();
             string animaltype = animalList[random.Next(animalList.Length)];
             PedHash Hash = (PedHash) API.GetHashKey(animaltype);
