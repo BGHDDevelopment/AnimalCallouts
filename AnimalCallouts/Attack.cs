@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Drawing;
 using System.Threading.Tasks;
 using CitizenFX.Core;
 using CitizenFX.Core.Native;
 using FivePD.API;
+using FivePD.API.Utils;
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.5")]
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.6")]
 
     public class Attack : Callout
     {
@@ -48,7 +48,7 @@ namespace AnimalCallouts
             string animaltype = animalList[random.Next(animalList.Length)];
             PedHash Hash = (PedHash) API.GetHashKey(animaltype);
             animal = await SpawnPed(Hash, Location);
-            victim = await SpawnPed(GetRandomPed(), Location);
+            victim = await SpawnPed(RandomUtils.GetRandomPed(), Location);
             API.SetAnimalMood(Hash.GetHashCode(), 1);
             animal.AlwaysKeepTask = true;
             animal.BlockPermanentEvents = true;
@@ -56,9 +56,6 @@ namespace AnimalCallouts
             victim.BlockPermanentEvents = true;
             Notify("~r~[AnimalCallouts] ~y~Victim is being chased by a mountain lion!");
 
-        }
-        public override void OnCancelBefore()
-        {
         }
         private void Notify(string message)
         {

@@ -3,11 +3,12 @@ using System.Threading.Tasks;
 using CitizenFX.Core;
 using CitizenFX.Core.Native;
 using FivePD.API;
+using FivePD.API.Utils;
 
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.5")]
+    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.6")]
 
     public class DogPackAttack : Callout
     {
@@ -58,7 +59,7 @@ namespace AnimalCallouts
             animal = await SpawnPed(Hash, Location);
             animal2 = await SpawnPed(Hash, Location);
             animal3 = await SpawnPed(Hash, Location);
-            victim = await SpawnPed(GetRandomPed(), Location);
+            victim = await SpawnPed(RandomUtils.GetRandomPed(), Location);
             API.SetAnimalMood(Hash.GetHashCode(), 1);
             animal.AlwaysKeepTask = true;
             animal.BlockPermanentEvents = true;
@@ -70,9 +71,6 @@ namespace AnimalCallouts
             victim.BlockPermanentEvents = true;
             Notify("~r~[AnimalCallouts] ~y~Victim is being attacked by a pack of dogs!");
 
-        }
-        public override void OnCancelBefore()
-        {
         }
         private void Notify(string message)
         {
