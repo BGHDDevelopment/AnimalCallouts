@@ -7,3 +7,14 @@ C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCall
 C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.net.dll
 C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.net.pdb
 C:\Users\USER\RiderProjects\AnimalCallouts\AnimalCallouts\bin\Release\FivePD.net.dll
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\bin\Release\AnimalCallouts.net.dll
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\bin\Release\AnimalCallouts.net.pdb
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\bin\Release\CitizenFX.Core.Client.dll
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\bin\Release\FivePD.net.dll
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\bin\Release\CitizenFX.Core.Client.xml
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\bin\Release\FivePD.net.xml
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.csprojAssemblyReference.cache
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.csproj.CoreCompileInputs.cache
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.csproj.CopyComplete
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.net.dll
+C:\Users\steph\Desktop\Source\AnimalCallouts\AnimalCallouts\obj\Release\AnimalCallouts.net.pdb

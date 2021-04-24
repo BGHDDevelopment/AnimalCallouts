@@ -8,16 +8,14 @@ using FivePD.API.Utils;
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.0.6")]
-
+    [CalloutProperties("Dog Pack Attack", "BGHDDevelopment", "1.1.0")]
     public class DogPackAttack : Callout
     {
-
         private string[] animalList = {"a_c_chop"};
         Ped victim;
         Ped animal, animal2, animal3;
 
-        
+
         public DogPackAttack()
         {
             Random rnd = new Random();
@@ -33,26 +31,9 @@ namespace AnimalCallouts
 
         private Blip animalBlip1, animalBlip2, animalBlip3, animalBlip4, victimBlip1;
 
-        public override void OnStart(Ped player)
+        public async override void OnStart(Ped player)
         {
             base.OnStart(player);
-            animal.AttachBlip();
-            animal2.AttachBlip();
-            animal3.AttachBlip();
-            victim.AttachBlip();
-            victim.Task.ReactAndFlee(animal);
-            API.Wait(500);
-            animal.Task.FightAgainst(victim);
-            animal2.Task.FightAgainst(victim);
-            animal3.Task.FightAgainst(victim);
-            API.Wait(2000);
-            animal3.Task.FightAgainst(player);
-        }
-        
-        public async override Task OnAccept()
-        {
-            InitBlip();
-            UpdateData();
             Random random = new Random();
             string animaltype = animalList[random.Next(animalList.Length)];
             PedHash Hash = (PedHash) API.GetHashKey(animaltype);
@@ -70,14 +51,30 @@ namespace AnimalCallouts
             victim.AlwaysKeepTask = true;
             victim.BlockPermanentEvents = true;
             Notify("~r~[AnimalCallouts] ~y~Victim is being attacked by a pack of dogs!");
-
+            animal.AttachBlip();
+            animal2.AttachBlip();
+            animal3.AttachBlip();
+            victim.AttachBlip();
+            victim.Task.ReactAndFlee(animal);
+            API.Wait(500);
+            animal.Task.FightAgainst(victim);
+            animal2.Task.FightAgainst(victim);
+            animal3.Task.FightAgainst(victim);
+            API.Wait(2000);
+            animal3.Task.FightAgainst(player);
         }
+
+        public async override Task OnAccept()
+        {
+            InitBlip();
+            UpdateData();
+        }
+
         private void Notify(string message)
         {
             API.BeginTextCommandThefeedPost("STRING");
             API.AddTextComponentSubstringPlayerName(message);
             API.EndTextCommandThefeedPostTicker(false, true);
         }
-
     }
 }

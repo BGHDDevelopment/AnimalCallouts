@@ -7,16 +7,14 @@ using FivePD.API.Utils;
 
 namespace AnimalCallouts
 {
-    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.0.6")]
-
+    [CalloutProperties("Mountain Lion Attack", "BGHDDevelopment", "1.1.0")]
     public class Attack : Callout
     {
-
         private string[] animalList = {"a_c_mtlion"};
         Ped victim;
         Ped animal;
 
-        
+
         public Attack()
         {
             Random rnd = new Random();
@@ -28,22 +26,11 @@ namespace AnimalCallouts
             CalloutDescription = "Someone is being attacked by a mountain lion!";
             ResponseCode = 3;
             StartDistance = 150f;
-        } 
-        
-        public override void OnStart(Ped player)
+        }
+
+        public async override void OnStart(Ped player)
         {
             base.OnStart(player);
-            animal.AttachBlip();
-            victim.AttachBlip();
-            victim.Task.ReactAndFlee(animal);
-            API.Wait(500);
-            animal.Task.FightAgainst(victim);
-        }
-        
-        public async override Task OnAccept()
-        {
-            InitBlip();
-            UpdateData();
             Random random = new Random();
             string animaltype = animalList[random.Next(animalList.Length)];
             PedHash Hash = (PedHash) API.GetHashKey(animaltype);
@@ -55,14 +42,24 @@ namespace AnimalCallouts
             victim.AlwaysKeepTask = true;
             victim.BlockPermanentEvents = true;
             Notify("~r~[AnimalCallouts] ~y~Victim is being chased by a mountain lion!");
-
+            animal.AttachBlip();
+            victim.AttachBlip();
+            victim.Task.ReactAndFlee(animal);
+            API.Wait(500);
+            animal.Task.FightAgainst(victim);
         }
+
+        public async override Task OnAccept()
+        {
+            InitBlip();
+            UpdateData();
+        }
+
         private void Notify(string message)
         {
             API.BeginTextCommandThefeedPost("STRING");
             API.AddTextComponentSubstringPlayerName(message);
             API.EndTextCommandThefeedPostTicker(false, true);
         }
-
     }
 }
